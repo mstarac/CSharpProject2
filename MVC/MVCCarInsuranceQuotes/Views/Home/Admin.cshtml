@@ -1,0 +1,70 @@
+﻿@using MVCCarInsuranceQuotes.Models
+@model List<QuoteList>
+
+<div class="row no-gutters col-sm-3 text-center">
+    <div class="card col-sm-12 col-md-10 col-lg-6 mx-auto shadow">
+        <div class="card-header text-center">
+            <h3 class="m-0">Final Quotes</h3>
+        </div>
+        <div class="card-body">
+            @foreach (var quote in Model)
+            {
+                using (Html.BeginForm("Remove", "Admin", FormMethod.Post))
+                {
+                    <div class="row mb-3">
+                        <div class="col-3">
+                             @quote.firstName
+                        </div>
+                        <div class="col-3">
+                             @quote.lastName
+                        </div>
+                        <div class="col-3">
+                             @quote.emailAddress
+                        </div>
+                        <div class="col-3">
+                             @quote.finalQuote
+                        </div>"
+                    </div>
+                }
+            }
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
